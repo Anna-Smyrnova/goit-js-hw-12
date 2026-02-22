@@ -49,8 +49,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    justify-content: space-around
-    ;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -91,22 +90,53 @@ p {
     letter-spacing: 0.04em;
     color: #2e2f42;
     text-align: center;
+
 }
-.loader-hidden {
+
+
+.load-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 125px;
+    height: 40px;
+    background-color: #4e75ff;
+    border: none;
+    
+    display: block;
+    margin: 0 auto;
+    
+    
+}
+
+.load-btn:hover,
+.load-btn:focus {
+    background-color: #6c8cff;
+} 
+.loader {
     display: none;
 }
-.is-active  {
-        width: 8px;
-        height: 48px;
-        display: inline-block;
-        position: relative;
-        left: 50%;
-        right: 50%;
-        border-radius: 4px;
-        box-sizing: border-box;
-        animation: animloader 1s linear infinite alternate;
-    }
 
+.loader.is-active {
+    width: 8px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    box-sizing: border-box;
+    animation: animloader 1s linear infinite alternate;
+}
+
+.hidden {
+  display: none;
+}
     @keyframes animloader {
         0% {
             box-shadow: 20px 0 rgba(255, 255, 255, 0), 40px 0 rgba(255, 255, 255, 0), 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0);
